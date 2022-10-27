@@ -1,0 +1,179 @@
+1.    basis        |            ram                                |             rom
+     full form     | random access memory                          |     read only memory
+     price         | ram is expensive compared to ran              |     cheaper than RAM
+     speed         | faster than ram                               |     slower compared to RAM
+     rw type       | data in RAM can be modified and read          |     data stored is read only, so it can't be modified
+
+
+2. advantages:
+                i) easy to understand and read 
+               ii) interpreted languages
+
+   disadvantages:
+                i) lesser libraries compared to other languages
+               ii) slow language since it's interprepted
+        
+3. yes, python is a case sensitive language. This means that it treats uppercase and lowercase letter differently.
+   Hence, we cannot use two terms having same characters but different cases in python.
+
+4. ASCII: american standard code for information interchange
+   CPU: central processing unit
+
+5. c) //
+
+6. 0.5 MiB
+
+7. True
+
+8. 3
+
+9. relational operators
+
+10. 3
+
+11. both statements 1 and 2 are True, and statement 2 is correct reason for statement 1
+
+12. both statements 1 and 2 are True, and statement 2 is correct reason for statement 1
+
+13.  i) c) arthmetic login unit
+
+    ii) c) input process and output generation
+
+   iii) d) _product
+
+    iv) b) adobe reader
+
+     v) c) oracle
+
+    vi) d) 1991
+
+   vii) a) key
+
+  viii) d) all of these
+
+    ix) a) #
+
+     x) c) to know the type of variable
+
+14. this statement is false, computer harwasre is virtually useless without computer software.
+    software is the programs that are needed to accomplish the input, processing, output, storage 
+    and control activites of information software.
+
+15. advantages:
+                i) speed: faster than human
+               ii) accuracy: we can get reailable information which is given by computers
+
+16. IDE stands for integrated develop environment. It's a coding tool which allows you to write, test 
+    and debug your code in an easier way, as they typically offer cose complestion or code insight by highlighitng, resources management
+    debugging tools
+
+
+PYTHON PROGRAMS:
+
+MARKS:
+
+name = str(input('enter your name: '))
+
+
+subject_1_marks = input('marks for subject 1: ')
+subject_2_marks = input('marks for subject 2: ')
+subject_3_marks = input('marks for subject 3: ')
+
+
+def check_if_numeric():
+    try:
+        float(subject_1_marks)
+        float(subject_2_marks)
+        float(subject_3_marks)
+    except ValueError:
+        return False
+
+
+if check_if_numeric() == False:
+    print('marks is not valid, input a number.')
+else:
+    percentage_subject_1 = float(subject_1_marks)/100*100
+    percentage_subject_2 = float(subject_2_marks)/100*100
+    percentage_subject_3 = float(subject_3_marks)/100*100
+    print()
+    print('--------------\n')
+    print('marks of', name, 'are:')
+    print(
+        ' subject 1:', percentage_subject_1,
+        '\n subject 2:', percentage_subject_2,
+        '\n subject 3:', percentage_subject_3
+    )
+
+SI CALCULATOR:
+
+principal = input('principal amount: ')
+rate_of_interest = input('rate of interest: ')
+time = input('time in years: ')
+
+
+def check_if_numeric():
+    try:
+        int(principal)
+        int(time)
+        float(rate_of_interest)
+    except ValueError:
+        return False
+
+
+if check_if_numeric() == False:
+    print('input correct value')
+else:
+    int(principal)
+    int(time)
+    float(rate_of_interest)
+
+
+si = principal*rate_of_interest*time/100
+ci = principal*((1+rate_of_interest)/100)
+
+diff = ci - si
+
+print('simple interest', si)
+print('compound interest', ci)
+print('difference between simple interest and compound interest is: ', diff)
+
+SQUARE AND CUBE CALCULATOR: 
+
+num = input('enter a num: ')
+
+
+def check_if_numeric():
+    try:
+        float(num)
+        return 'yes'
+    except ValueError:
+        return False
+
+
+if check_if_numeric() == 'yes':
+    print('square of', num, 'is', float(num)**2)
+    print('cube of', num, 'is', float(num)**3)
+else:
+    print('that\'s not a valid number')
+
+CHECK IF ELIGIBLE FOR VOTE:
+
+
+name = input('your name: ')
+age = input('age: ')
+
+
+def check_if_numeric_and_vote_eligible():
+    try:
+        if float(age) > 18:
+            return 'Yes'
+    except ValueError:
+        return False
+
+
+if check_if_numeric_and_vote_eligible() == False:
+    print('input a valid age')
+elif check_if_numeric_and_vote_eligible() == 'Yes':
+    print('you\'re eligible for vote')
+else:
+    print('not eligible for vote :(')
